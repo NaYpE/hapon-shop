@@ -1,18 +1,23 @@
 import React from "react";
+import '../styles/Login.scss';
 
 const Login = () => {
     return (
         <div className="login">
             <div className="form-container">
                 <img src="../imagenes/hapon-logo.png" alt="logo" className="logo" />
-                <h1 className="title">Create a new password</h1>
-                <p className="subtitle">Enter a new password for yue account</p>
+
+                <h1 className="title">Crear una nueva contraseña</h1>
+                <p className="subtitle">Ingresa una nueva contraseña para tu cuenta</p>
+
                 <form action="/" className="form">
-                    <label for="password" className="label">Password</label>
+                    <label for="password" className="label">Contraseña</label>
                     <input type="password" id="password" placeholder="*********" className="input input-password" />
-                    <label for="new-password" className="label">Password</label>
+
+                    <label for="new-password" className="label">Confirmar Contraseña</label>
                     <input type="password" id="new-password" placeholder="*********" className="input input-password" />
-                    <input type="submit" value="Confirm" className="primary-button login-button" />
+
+                    <input type="submit" value="Enviar" className="primary-button login-button" />
                 </form>
             </div>
         </div>
