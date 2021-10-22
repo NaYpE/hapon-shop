@@ -1,0 +1,71 @@
+/*Preffix: hpn-red*/
+
+/* Colors Custom */
+.hpn-red {
+  background-color: #b32428 !important;
+}
+
+.hpn-red-text {
+  color: #b32428 !important;
+}
+
+.hpn-light-red {
+  background-color: #d19ea2 !important;
+}
+
+.hpn-light-red-text {
+  color: #d19ea2 !important;
+}
+
+.hpn-alt {
+  background-color: #a52255 !important;
+}
+
+.hpn-alt-text {
+  color: #a52255 !important;
+}
+
+.hpn-neutral {
+  background-color: #2f4858 !important;
+}
+
+.hpn-neutral-text {
+  color: #2f4858 !important;
+}
+
+/* Text Custom */
+.hpn-special-text {
+  font-family: 'Luckiest Guy', cursive;
+}
+
+/* Behavior Custom */
+a:not(.button) {
+  text-decoration: underline;
+}
+
+/* General Custom */
+body,
+h1,
+section,
+div,
+p,
+b,
+i,
+em,
+strong,
+article,
+nav {
+  font-family: 'Rubik', sans-serif;
+}
+
+figure.hpn-img-collection > img {
+  max-height: 240px;
+}
+
+figure.hpn-product-img > img {
+  max-height: 500px;
+}
+
+a.hpn-link-no-underline {
+  text-decoration: none;
+}
