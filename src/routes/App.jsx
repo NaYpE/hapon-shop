@@ -10,14 +10,14 @@ import '../styles/hapon-styles.css';
 const App = () => {
     return (
         <BrowserRouter>
-            <Switch>
-                <Layout>
+            <Layout>
+                <Switch>
                     <Route exact path="/" component={ Home } />
                     <Route exact path="/login" component={ Login } />
                     <Route exact path="/recovery-password" component={ RecoveryPassword }/>
-                    <Route component={ NotFound } />
-                </Layout>
-            </Switch>
+                    <Route path="*" component={ NotFound } />
+                </Switch>
+            </Layout>
         </BrowserRouter>
     );
 }
