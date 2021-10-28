@@ -1,9 +1,11 @@
+import Panchiro from '@images/productos/producto-funko-1.png';
+
 export default {
     cart: [],
     products: [
       {
         'id': '1',
-        'image': './imagenes/productos/producto-funko-1.png',
+        'image': {Panchiro},
         'title': 'Tanjiro Kamado',
         'price': 500.00,
         'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
