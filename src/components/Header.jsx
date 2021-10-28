@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 import "@styles/hapon-styles.scss";
 import "bulma/css/bulma.min.css";
 import "@styles/Header.scss";
@@ -11,12 +13,12 @@ const Header = () => {
     <nav className="container navbar is-fixed-top has-background-white is-fluid pt-2 pb-2 has-shadow">
       <div className="navbar-brand">
         <figure className="image is-align-self-center">
-          <a className="navbar-item" href="./index.html">
+          <Link className="navbar-item" to="/">
             <img src={logo} />
-          </a>
+          </Link>
         </figure>
 
-        <a
+        <Link
           role="button"
           className="navbar-burger"
           aria-label="menu"
@@ -26,31 +28,31 @@ const Header = () => {
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
-        </a>
+        </Link>
       </div>
 
       <div id="navbarBasicExample" className="navbar-menu">
         <div className="navbar-start">
-          <a className="navbar-item hpn-neutral-text" href="./anime.html">
+          <Link className="navbar-item hpn-neutral-text" to="./anime.html">
             Figuras de Anime
-          </a>
-          <a className="navbar-item hpn-neutral-text" href="./videojuegos.html">
+          </Link>
+          <Link className="navbar-item hpn-neutral-text" to="./videojuegos.html">
             Figuras de Videojuegos
-          </a>
-          <a
+          </Link>
+          <Link
             className="navbar-item hpn-neutral-text"
-            href="./otros-productos.html"
+            to="./otros-productos.html"
           >
             Otros Productos
-          </a>
+          </Link>
         </div>
         <div class="navbar-end">
-          <a className="navbar-item hpn-neutral-text" href="./acerca.html">
+          <Link className="navbar-item hpn-neutral-text" to="./acerca.html">
             Acerca de
-          </a>
-          <a className="navbar-item hpn-neutral-text" href="./contacto.html">
+          </Link>
+          <Link className="navbar-item hpn-neutral-text" to="./contacto.html">
             Contacto
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -58,8 +60,10 @@ const Header = () => {
         <ul>
           <li className="navbar-email">Usuario</li>
           <li className="navbar-shopping-cart">
-            <img src={iconShopping} alt="shopping cart" />
-            <div>2</div>
+            <Link to="/checkout">
+              <img src={iconShopping} alt="shopping cart" />
+              <div>4</div>
+            </Link>
           </li>
         </ul>
       </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import ProductInfo from '../components/ProductInfo';
+import ProductInfo from '../components/ProductInfo.jsx';
 import '../styles/ProductDetail.scss';
 
 const ProductDetail = () => {
