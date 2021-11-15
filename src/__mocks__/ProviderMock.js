@@ -1,19 +1,17 @@
-import React from 'react';
-import { createStore } from 'redux';
-import { Router } from 'react-router-dom';
-import { Provider } from 'react-redux';
-import { createBrowserHistory } from 'history';
-import initialState from '../initialState';
-import reducer from '../reducers';
+import React from "react";
+import { createStore } from "redux";
+import { Router } from "react-router-dom";
+import { Provider } from "react-redux";
+import { createMemoryHistory  } from "history";
+import initialState from "../initialState.js";
+import reducer from "../reducers/index.js";
 
 const store = createStore(reducer, initialState);
-const history = createBrowserHistory();
+const history = createMemoryHistory ();
 
 const ProviderMock = props => (
   <Provider store={store}>
-    <Router history={history}>
-      {props.children}
-    </Router>
+    <Router history={history}>{props.children}</Router>
   </Provider>
 );
 

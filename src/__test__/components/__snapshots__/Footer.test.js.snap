@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer Snapshot Comprobar la UI del componente Footer 1`] = `
+<footer
+  className="footer hpn-neutral py-5"
+>
+  <div
+    className="content has-text-centered"
+  >
+    <p
+      className="Footer-title"
+    >
+      Hapon
+    </p>
+    <p
+      className="has-text-white is-size-6"
+    >
+      Tienda de figuras de Guadalajara Jalisco, México, ©2021
+    </p>
+    <p>
+      <a
+        className="has-text-white"
+        href="#"
+      >
+        <span
+          className="icon-text"
+        >
+          <span
+            className="icon is-size-5"
+          >
+            <i
+              className="fab fa-facebook-f"
+            />
+          </span>
+        </span>
+      </a>
+      <a
+        className="has-text-white"
+        href="#"
+      >
+        <span
+          className="icon-text"
+        >
+          <span
+            className="icon is-size-5"
+          >
+            <i
+              className="fab fa-instagram"
+            />
+             
+          </span>
+        </span>
+      </a>
+      <a
+        className="has-text-white"
+        href="#"
+      >
+        <span
+          className="icon-text"
+        >
+          <span
+            className="icon is-size-5"
+          >
+            <i
+              className="fab fa-twitter"
+            />
+          </span>
+        </span>
+      </a>
+    </p>
+  </div>
+</footer>
+`;

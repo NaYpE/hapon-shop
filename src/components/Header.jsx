@@ -1,14 +1,14 @@
 import React from "react";
-import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
+import { Link } from "react-router-dom";
+import { connect } from "react-redux";
 import "@styles/hapon-styles.scss";
 import "bulma/css/bulma.min.css";
 import "@styles/Header.scss";
 
-import logo from "@images/hapon-logo.png";
+import {logo} from "@images/hapon-logo.png";
 import iconShopping from "@icons/icon_shopping_cart.svg";
 
-const Header = () => {
+const Header = (props) => {
   return (
     <nav className="container navbar is-fixed-top has-background-white is-fluid pt-2 pb-2 has-shadow">
       <div className="navbar-brand">
@@ -36,7 +36,10 @@ const Header = () => {
           <Link className="navbar-item hpn-neutral-text" to="./anime.html">
             Figuras de Anime
           </Link>
-          <Link className="navbar-item hpn-neutral-text" to="./videojuegos.html">
+          <Link
+            className="navbar-item hpn-neutral-text"
+            to="./videojuegos.html"
+          >
             Figuras de Videojuegos
           </Link>
           <Link
@@ -62,7 +65,11 @@ const Header = () => {
           <li className="navbar-shopping-cart">
             <Link to="/checkout">
               <img src={iconShopping} alt="shopping cart" />
-              <div>4</div>
+              <div>
+                {props.cart.length > 0 && (
+                  <div className="Header-alert">{props.cart.length}</div>
+                )}
+              </div>
             </Link>
           </li>
         </ul>
@@ -71,4 +78,10 @@ const Header = () => {
   );
 };
 
-export default Header;
+const mapStateToProps = (state) => {
+  return {
+    cart: state.cart,
+  };
+};
+
+export default connect(mapStateToProps, null)(Header);
