@@ -49,7 +49,7 @@ const Header = (props) => {
             Otros Productos
           </Link>
         </div>
-        <div class="navbar-end">
+        <div className="navbar-end">
           <Link className="navbar-item hpn-neutral-text" to="./acerca.html">
             Acerca de
           </Link>

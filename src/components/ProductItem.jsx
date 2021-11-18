@@ -7,16 +7,16 @@ const ProductItem = () => {
 	return (
 		<div className="card ProductItem">
 			<header>
-				<span class="tag is-medium hpn-alt has-text-white">Nuevo</span>
+				<span className="tag is-medium hpn-alt has-text-white">Nuevo</span>
 			</header>
-			<div class="card-content pt-0">
-				<figure class="image is-1by1">
+			<div className="card-content pt-0">
+				<figure className="image is-1by1">
 					<img src={funko2} alt="Zenitsu" />
 				</figure>
 				<div className="product-info">
-					<div class="content has-text-centered has-text-weight-semibold is-size-5">
+					<div className="content has-text-centered has-text-weight-semibold is-size-5">
 						<p>
-							<a class="hpn-red-text" href="#">
+							<a className="hpn-red-text" href="#">
 								Funk Pop: Tanjiro Kamad
 								<br />
 								$500.00 MXN
