@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/hapon-styles.scss';
+import '@styles/hapon-styles.scss';
 
 const Footer = () => (
   <footer className="footer hpn-neutral py-5">
@@ -9,7 +9,7 @@ const Footer = () => (
           Tienda de figuras de Guadalajara Jalisco, México, &copy;2021
         </p>
         <p>
-          <a href="#" className="has-text-white"
+          <a href="https://www.facebook.com/HaponStore" className="has-text-white"
             ><span className="icon-text"
               ><span className="icon is-size-5"
                 ><i className="fab fa-facebook-f"></i></span></span

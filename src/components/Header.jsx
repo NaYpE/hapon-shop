@@ -5,7 +5,7 @@ import "@styles/hapon-styles.scss";
 import "bulma/css/bulma.min.css";
 import "@styles/Header.scss";
 
-import {logo} from "@images/hapon-logo.png";
+import logo from "@images/hapon-logo.png";
 import iconShopping from "@icons/icon_shopping_cart.svg";
 
 const Header = (props) => {
