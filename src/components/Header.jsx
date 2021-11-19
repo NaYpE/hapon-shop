@@ -1,14 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import "@styles/hapon-styles.scss";
 import "bulma/css/bulma.min.css";
 import "@styles/Header.scss";
 
+import Menu from "@components/Menu.jsx"
 import logo from "@images/hapon-logo.png";
 import iconShopping from "@icons/icon_shopping_cart.svg";
 
 const Header = (props) => {
+  const [toggle, setToggle] = useState(false);
+
+  const handleToggle = () => {
+    setToggle(!toggle);
+  }
+
   return (
     <nav className="container navbar is-fixed-top has-background-white is-fluid pt-2 pb-2 has-shadow">
       <div className="navbar-brand">
@@ -61,7 +68,9 @@ const Header = (props) => {
 
       <div className="navbar-right">
         <ul>
-          <li className="navbar-email">Usuario</li>
+          <li className="navbar-email" onClick={handleToggle}>
+            usuario@hapon.com
+          </li>
           <li className="navbar-shopping-cart">
             <Link to="/checkout">
               <img src={iconShopping} alt="shopping cart" />
@@ -74,6 +83,7 @@ const Header = (props) => {
           </li>
         </ul>
       </div>
+      {toggle ? <Menu /> : null}
     </nav>
   );
 };
