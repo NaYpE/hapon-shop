@@ -1,9 +1,13 @@
-import React from 'react';
-import '../styles/ProductItem.scss';
+import React, { useState } from 'react';
+import '@styles/ProductItem.scss';
 import funko2 from '@images/productos/producto-funko-2.png';
-import iconAddCart from '@icons/bt_add_to_cart.svg';
+import addToCart from '@icons/bt_add_to_cart.svg';
 
 const ProductItem = () => {
+	const [cart, setCart] = useState('');
+	const handleClick = () => {
+		setCart('Hola');
+	}
 	return (
 		<div className="card ProductItem">
 			<header>
@@ -23,9 +27,10 @@ const ProductItem = () => {
 							</a>
 						</p>
 					</div>
-					<figure>
-						<img src={iconAddCart} alt="Add" />
+					<figure onClick= {handleClick}>
+						<img src={addToCart} alt="Add" />
 					</figure>
+					{cart}
 				</div>
 			</div>
 		</div>

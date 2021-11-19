@@ -1,5 +1,6 @@
 import React from "react";
 import tanjiro from "@images/productos/producto-funko-1.png";
+import addToCart from '@icons/bt_add_to_cart.svg';
 
 const Product = ({ product, handleAddToCart }) => (
   <div className="card">
@@ -22,6 +23,7 @@ const Product = ({ product, handleAddToCart }) => (
         <p>{product.description}</p>
       </div>
       <button type="button" onClick={handleAddToCart(product)}>
+      <img src={addToCart} alt="add to cart" />
         Comprar
       </button>
     </div>

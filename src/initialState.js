@@ -6,7 +6,7 @@ export default {
         'image': './imagenes/productos/producto-funko-1.png',
         'title': 'Tanjiro Kamado',
         'price': 500.00,
-        'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        'description': 'Funk Pop Tanjiro Kamado Demon Slayer.',
       },
       {
         'id': '2',

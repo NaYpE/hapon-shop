@@ -1,7 +1,7 @@
 import React from 'react';
-import '../styles/ProductInfo.scss';
+import '@styles/ProductInfo.scss';
 import tanjiro from '@images/productos//producto-funko-1.png';
-import iconAdd from '@icons/bt_add_to_cart.svg';
+import addToCart from '@icons/bt_add_to_cart.svg';
 
 const ProductInfo = () => {
 	return (
@@ -12,7 +12,7 @@ const ProductInfo = () => {
 				<p>Tanjiro Kamado</p>
 				<p>Funk Pop Tanjiro Kamado Demon Slayer.</p>
 				<button className="primary-button add-to-cart-button">
-					<img src={iconAdd} alt="add to cart" />
+					<img src={addToCart} alt="add to cart" />
 					Add to cart
 				</button>
 			</div>
