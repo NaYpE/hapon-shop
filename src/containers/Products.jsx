@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import actions from '../actions/index.js';
-import Product from '../components/Product.jsx';
-import '../styles/Products.css';
+import actions from '@actions/index.js';
+import Product from '@components/Product.jsx';
+import '@styles/Products.css';
 
 const Products = (props) => {
   const { products } = props;

@@ -20,6 +20,7 @@ module.exports = {
             '@actions': path.resolve(__dirname, 'src/actions'),
             '@icons': path.resolve(__dirname, 'src/assets/icons/'),
             '@logos': path.resolve(__dirname, 'src/assets/logos/'),
+            '@hooks': path.resolve(__dirname, 'src/hooks'),
             '@images': path.resolve(__dirname, 'src/assets/images/'),
           }
     },

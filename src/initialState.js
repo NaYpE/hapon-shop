@@ -5,14 +5,14 @@ export default {
         'id': '1',
         'image': './imagenes/productos/producto-funko-1.png',
         'title': 'Tanjiro Kamado',
-        'price': 500.00,
+        'price': 1500.00,
         'description': 'Funk Pop Tanjiro Kamado Demon Slayer.',
       },
       {
         'id': '2',
         'image': './imagenes/productos/producto-funko-2.png',
         'title': 'Zenitsu Agatsuma',
-        'price': 630.00,
+        'price': 1630.00,
         'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
       },
       {

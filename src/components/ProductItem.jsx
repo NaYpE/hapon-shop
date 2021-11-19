@@ -4,9 +4,9 @@ import funko2 from '@images/productos/producto-funko-2.png';
 import addToCart from '@icons/bt_add_to_cart.svg';
 
 const ProductItem = () => {
-	const [cart, setCart] = useState('');
+	const [cart, setCart] = useState([]);
 	const handleClick = () => {
-		setCart('Hola');
+		setCart([]);
 	}
 	return (
 		<div className="card ProductItem">
@@ -23,14 +23,13 @@ const ProductItem = () => {
 							<a className="hpn-red-text" href="#">
 								Funk Pop: Tanjiro Kamad
 								<br />
-								$500.00 MXN
+								$10000.00 MXN
 							</a>
 						</p>
 					</div>
 					<figure onClick= {handleClick}>
 						<img src={addToCart} alt="Add" />
 					</figure>
-					{cart}
 				</div>
 			</div>
 		</div>
