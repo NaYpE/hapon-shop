@@ -1,17 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import "@styles/hapon-styles.scss";
 import "bulma/css/bulma.min.css";
 import "@styles/Header.scss";
-
+import AppContext from "@context/AppContext.js";
 import Menu from "@components/Menu.jsx"
 import logo from "@images/hapon-logo.png";
 import iconShopping from "@icons/icon_shopping_cart.svg";
 
-const Header = (props) => {
+const Header = () => {
   const [toggle, setToggle] = useState(false);
-
+  const { state } = useContext(AppContext);
   const handleToggle = () => {
     setToggle(!toggle);
   }
@@ -74,11 +74,7 @@ const Header = (props) => {
           <li className="navbar-shopping-cart">
             <Link to="/checkout">
               <img src={iconShopping} alt="shopping cart" />
-              <div>
-                {props.cart.length > 0 && (
-                  <div className="Header-alert">{props.cart.length}</div>
-                )}
-              </div>
+              { state.cart.length > 0 ? <div className="Header-alert">${state.cart.length}</div> : null }
             </Link>
           </li>
         </ul>
