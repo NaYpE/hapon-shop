@@ -1,16 +1,17 @@
 import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
-import { connect } from "react-redux";
 import "@styles/hapon-styles.scss";
 import "bulma/css/bulma.min.css";
 import "@styles/Header.scss";
 import AppContext from "@context/AppContext.js";
 import Menu from "@components/Menu.jsx"
 import logo from "@images/hapon-logo.png";
-import iconShopping from "@icons/icon_shopping_cart.svg";
+import shoppingCart  from "@icons/icon_shopping_cart.svg";
+import MyOrder from "@containers/MyOrder.jsx";
 
 const Header = () => {
   const [toggle, setToggle] = useState(false);
+  const [toggleOrders, setToggleOrders] = useState(false);
   const { state } = useContext(AppContext);
   const handleToggle = () => {
     setToggle(!toggle);
@@ -71,23 +72,18 @@ const Header = () => {
           <li className="navbar-email" onClick={handleToggle}>
             usuario@hapon.com
           </li>
-          <li className="navbar-shopping-cart">
-            <Link to="/checkout">
-              <img src={iconShopping} alt="shopping cart" />
+          <li className="navbar-shopping-cart" onClick={ () => setToggleOrders(!toggleOrders)}>
+            
+            <img src={shoppingCart} alt="shopping cart" />
               { state.cart.length > 0 ? <div className="Header-alert">${state.cart.length}</div> : null }
-            </Link>
+            
           </li>
         </ul>
       </div>
       {toggle ? <Menu /> : null}
+      {toggleOrders ? <MyOrder /> : null}
     </nav>
   );
 };
 
-const mapStateToProps = (state) => {
-  return {
-    cart: state.cart,
-  };
-};
-
-export default connect(mapStateToProps, null)(Header);
+export default Header;
